@@ -1,2 +1,3 @@
 .ipynb_checkpoints/
 inputs/xgb_modeldf.buffer
+*.buffer
