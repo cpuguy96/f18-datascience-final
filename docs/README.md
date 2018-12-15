@@ -9,7 +9,7 @@ We are trying to understand customer purchasing behavior as a function of demogr
 - [Isabel Li](https://github.com/imabelli)
 - [Shahid Nowshad](https://github.com/shahidhn)
 
-# Introduction
+# Introduction & Background
 ## Dataset
 The [Black Friday dataset](https://www.kaggle.com/mehdidag/black-friday) contains 550,000 observations about Black Friday sales in a particular retail store. The dataset provides some information about the customer and the item being purchased. 
 
@@ -22,6 +22,9 @@ Broadly, our goal is to understand customer purchasing behavior as a function of
 The dataset provides information about how much a customer has spent on a certain product, but does not specify the price of each product - we know this because the same product ID returns different purchase amounts across different entries. Therefore, for the purposes of this project, we assume that every product has the same cost of $1 - this is clearly a huge assumption, and might lead to a weaker model. Having access to the price of each product at the point of purchase would have helped the accuracy and viability of our model.
 
 Given our problem statement, another assumption we are making is that Black Friday spending habits correlate to the rest of the year for all types of customers. While there is probably a strong correlation, this may not entirely be true. For example, people might purchase more gifts on Black Friday than other times of the year given that it is close to a holiday season. Also, people are possibly more likely to buy cold weather clothing (at least in the US).
+
+## High Level Outline of Approach
+![Project Overview](http://shahidhn.github.io/f18-datascience-final/images/process_overview_final.jpg)
 
 # Working with the Dataset
 ## Information in Dataset
