@@ -1,3 +1,14 @@
+![Clothes hanging in store](http://shahidhn.github.io/f18-datascience-final/images/clothes.jpg)
+
+# Abstract
+We are trying to understand customer purchasing behavior as a function of demographics, with reference to the [Black Friday dataset](https://www.kaggle.com/mehdidag/black-friday) on Kaggle. We first do some data visualization and pre-processing, primarily in the form of one-hot encoding of categorical data, in order to get a better understanding of the data we are working with. We then performed Principal Component Analysis (PCA) to reduce the dimensionality of the data, followed by K-means clustering to find clusters within our feature set, before running XGBoost on each cluster to predict the purchase amounts for each available product category. Our final XGBoost model had an MAE of 2040.1. Finally we elaborate on some learnings and future improvements of our work.
+
+# Team
+- [Chimezie Iwuanyanwu](https://github.com/cpuguy96)
+- [Hamza Khatri](https://github.com/hamzacooly)
+- [Isabel Li](https://github.com/imabelli)
+- [Shahid Nowshad](https://github.com/shahidhn)
+
 # Introduction
 ## Dataset
 The [Black Friday dataset](https://www.kaggle.com/mehdidag/black-friday) contains 550,000 observations about Black Friday sales in a particular retail store. The dataset provides some information about the customer and the item being purchased. 
@@ -66,8 +77,10 @@ This is the feature importance graph returned by XGBoost (we have cropped out th
 Let us revisit our problem statement of recommending top 10 product categories the customer is most likely to have interest in, given customer demographics, by predicting purchase amount per category. For each cluster, the product categories which are projected to have the highest purchase amounts are as follows:
 
 > Top 10 product categories for cluster 0: 1 8 5 16 2 15 6 14 4 17
+
 > Top 10 product categories for cluster 1: 1 8 5 16 2 15 14 6 4 17
-> Top 10 product categories for cluster 2: 8 1 5 16 2 15 14 6 17 4
+
+> Top 10 product categories for cluster 2: 8 1 5 16 2 15 14 6 17 4 
 
 # Conclusion and Future Steps
 ## Insights
@@ -87,4 +100,21 @@ As mentioned before, the dataset provides information about how much a customer 
 The dataset abstracts out a lot of information, which could have been useful in understanding the data trends and explaining our results. For instance: product categories are denominated 1 - 18, city categories are denominated A-C, etc. Having an understanding of what each product category number corresponds to, for example, would help us better understand trends in purchasing behavior across customer demographic clusters, which would make our work more useful and generalizable.
 
 ## Further Applications
+### Context-based Recommendation Engine
+Right now, our model takes in the demographics of a customer and outputs the top product categories the customer is likely to purchase. The primary application of this comes from the context of a retail store recommending products to a potential customer about whom the store only has demographic information.
 
+We could reconfigure our model to account for the purchase history of a customer, if the customer has shopped at the store before. One way to do this would be to have the model inputs be the demographics of the customer as well as one, possibly more, product category (possibly the category that the customer has purchased most frequently in the past, or the category of the customer's most recent purchase). The output would still be the the top product categories the customer is likely to purchase, but given that there is some variation in purchasing behavior even within customer clusters, the output could quite possibly be different from the base case.
+
+## Store Branch Expansion
+Another application of our model could be from the perspective of the retail store opening up a new branch in a new area: Given the demographic distribution of the residents in that area, what products should the store stock up in inventory such that it can maximize sales? This can be done by finding the corresponding cluster proportions of the residents in that area, and stocking up in inventory in those proportions. 
+
+For instance, if it turns out that the residents in this new area fall into the following cluster proportions:
+
+- Cluster 0: 30%
+- Cluster 1: 30%
+- Cluster 2: 40%
+
+Then the store can stock 30% of their inventory according to the purchasing preferences of Cluster 0, 30% for Cluster 1, and 40% for Cluster 2. This can be adapted for any number of clusters, in the event that we reconfigure our clustering process.
+
+## Predicting Sales Performance of New Products
+When a new product hits the shelves, our model allows the store to predict the purchase amounts of that product given the product's category and the demographic distribution of the customers that frequent that store.
