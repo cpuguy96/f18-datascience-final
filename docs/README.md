@@ -117,4 +117,4 @@ For instance, if it turns out that the residents in this new area fall into the 
 Then the store can stock 30% of their inventory according to the purchasing preferences of Cluster 0, 30% for Cluster 1, and 40% for Cluster 2. This can be adapted for any number of clusters, in the event that we reconfigure our clustering process.
 
 ## Predicting Sales Performance of New Products
-When a new product hits the shelves, our model allows the store to predict the purchase amounts of that product given the product's category and the demographic distribution of the customers that frequent that store.
+When a new product hits the shelves, our model allows the store to predict the purchase amounts of that product given the product's category and the demographic distribution of the customers who frequent that store.
