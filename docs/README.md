@@ -77,9 +77,9 @@ This is the feature importance graph returned by XGBoost (we have cropped out th
 Let us revisit our problem statement of recommending top 10 product categories the customer is most likely to have interest in, given customer demographics, by predicting purchase amount per category. For each cluster, the product categories which are projected to have the highest purchase amounts are as follows:
 
 > Top 10 product categories for cluster 0: 1 8 5 16 2 15 6 14 4 17
-
+> 
 > Top 10 product categories for cluster 1: 1 8 5 16 2 15 14 6 4 17
-
+> 
 > Top 10 product categories for cluster 2: 8 1 5 16 2 15 14 6 17 4 
 
 # Conclusion and Future Steps
