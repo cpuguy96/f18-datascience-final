@@ -78,3 +78,13 @@ It is possible that our clusters of customers are not distinct enough, and our P
 
 ### Feature Importance
 Based on the graph returned by XGBoost, it seems like age, years in current city, and gender are the most important features in predicting the purchase amounts per category.
+
+## Improvements
+### Pricing Data
+As mentioned before, the dataset provides information about how much a customer has spent on a certain product, but does not specify the price of each product. This makes it tough to build an accurate model, as there are probably differences in price points across product categories. Also, from everday experience, price is certainly a factor in deciding whether or not to buy a certain product. If we had pricing data, we would have been able to regress on product sales rather than purchase amounts, which would have more accurately reflected purchasing behavior.
+
+### Data Granularity
+The dataset abstracts out a lot of information, which could have been useful in understanding the data trends and explaining our results. For instance: product categories are denominated 1 - 18, city categories are denominated A-C, etc. Having an understanding of what each product category number corresponds to, for example, would help us better understand trends in purchasing behavior across customer demographic clusters, which would make our work more useful and generalizable.
+
+## Further Applications
+
