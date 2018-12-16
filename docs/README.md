@@ -27,7 +27,7 @@ Given our problem statement, another assumption we are making is that Black Frid
 ![Project Overview](http://shahidhn.github.io/f18-datascience-final/images/process_overview_final%20(1).jpg)
 
 # Working with the Dataset
-Source: https://www.kaggle.com/mehdidag/black-friday
+Source<sup>[1](#f1)</sup>: https://www.kaggle.com/mehdidag/black-friday
 ## Information in Dataset
 - Customer Information:
 	- User ID
@@ -66,10 +66,10 @@ We can see that most features are weakly correlated. The customer age correlates
 
 ## Data Exploration
 ### Dimensionality Reduction
-Following one-hot encoding of categorical data, dimensionality reduction is necessary to improve the performance of prospective learning algorithms. Thus, principle component analysis and factor analysis are used to reduce the dimensionality of the dataset and allow for visualization after preprocessing. The top 95% of variance explained by each dimensionality method is used as a baseline for feature reduction. Separate datasets are created from each feature reduction method. 
+Following one-hot encoding<sup>[3](#f3)</sup> of categorical data, dimensionality reduction is necessary to improve the performance of prospective learning algorithms. Thus, principle component analysis<sup>[4](#f4)</sup> and factor analysis are used to reduce the dimensionality of the dataset and allow for visualization after preprocessing. The top 95% of variance explained by each dimensionality method is used as a baseline for feature reduction. Separate datasets are created from each feature reduction method. 
 ![Principle Component Analysis](http://shahidhn.github.io/f18-datascience-final/images/pca.jpg)
 ### K-means Clustering
-K-means clustering is used to segment customers based on their demographics. The elbow method is used to determine the optimal number of clusters to create for the normal model, principle component analysis, and factor analysis datasets. After a specified number of clusters is given, k-means clustering is run to create additional datasets containing the user assigned cluster number. 
+K-means clustering is used to segment customers based on their demographics. The elbow method<sup>[2](#f2)</sup> is used to determine the optimal number of clusters to create for the normal model, principle component analysis, and factor analysis datasets. After a specified number of clusters is given, k-means clustering is run to create additional datasets containing the user assigned cluster number. 
 ![K-means clustering](http://shahidhn.github.io/f18-datascience-final/images/k-means_clustering.jpg)
 
 ## Predictive Modeling
@@ -133,3 +133,13 @@ Then the store can stock 30% of their inventory according to the purchasing pref
 
 ## Predicting Sales Performance of New Products
 When a new product hits the shelves, our model allows the store to predict the purchase amounts of that product given the product's category and the demographic distribution of the customers who frequent that store.
+
+## References
+
+<a name="f1">1</a>: M. Dagdoug, "Black Friday", Kaggle.com, 2018. \[Online\]. Available: https://www.kaggle.com/mehdidag/black-friday.
+
+<a name="f2">2</a>: R. Gove, "Using the elbow method to determine the optimal number of clusters for k-means clustering", Bl.ocks.org, 2017. \[Online\]. Available: https://bl.ocks.org/rpgove/0060ff3b656618e9136b.
+
+<a name="f3">3</a>: R. Vasudev, "What is One Hot Encoding? Why And When do you have to use it?", Hacker Noon, 2017. \[Online\]. Available: https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f.
+
+<a name="f4">4</a>: R. Kumar, "Understanding Principal Component Analysis – Rishav Kumar – Medium", Medium, 2018. \[Online\]. Available: https://medium.com/@aptrishu/understanding-principle-component-analysis-e32be0253ef0.
