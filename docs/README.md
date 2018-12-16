@@ -64,15 +64,15 @@ We can see that most features are weakly correlated. The customer age correlates
 
 # Modeling
 
-##Data Exploration
-###Dimensionality Reduction
+## Data Exploration
+### Dimensionality Reduction
 Following one-hot encoding of categorical data, dimensionality reduction is necessary to improve the performance of prospective learning algorithms. Thus, principle component analysis and factor analysis are used to reduce the dimensionality of the dataset and allow for visualization after preprocessing. The top 95% of variance explained by each dimensionality method is used as a baseline for feature reduction. Separate datasets are created from each feature reduction method. 
 ![Principle Component Analysis](http://shahidhn.github.io/f18-datascience-final/images/pca.jpg)
-###K-means Clustering
+### K-means Clustering
 K-means clustering is used to segment customers based on their demographics. The elbow method is used to determine the optimal number of clusters to create for the normal model, principle component analysis, and factor analysis datasets. After a specified number of clusters is given, k-means clustering is run to create additional datasets containing also the user assigned cluster number. 
 ![K-means clustering](http://shahidhn.github.io/f18-datascience-final/images/k-means_clustering.jpg)
 
-##Predictive Modeling
+## Predictive Modeling
 Training and testing splits are created for each dataset produced in the feature reduction and clustering sections. Linear, multi-layer perceptron, and XGBoost regression models are trained and scored using each of the produced datasets. Cross validation is used to fine tune the hyperparameters for each model. Each model is used to predict product sales per cluster. First, we used linear regression as a baseline to determine the best form of preprocessing. Then, we tested with MLP (commonly used as a universal approximator). Finally, we noticed the effectiveness of boosting with decision trees, so we tried an even better boost ensemble method: XGBoost. Results from each model are summarized in the following section. 
 
 # Results
