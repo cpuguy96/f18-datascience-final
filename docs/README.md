@@ -24,9 +24,10 @@ The dataset provides information about how much a customer has spent on a certai
 Given our problem statement, another assumption we are making is that Black Friday spending habits correlate to the rest of the year for all types of customers. While there is probably a strong correlation, this may not entirely be true. For example, people might purchase more gifts on Black Friday than other times of the year given that it is close to a holiday season. Also, people are possibly more likely to buy cold weather clothing (at least in the US).
 
 ## High Level Outline of Approach
-![Project Overview](http://shahidhn.github.io/f18-datascience-final/images/process_overview_final.jpg)
+![Project Overview](http://shahidhn.github.io/f18-datascience-final/images/process_overview_final%20(1).jpg)
 
 # Working with the Dataset
+Source: https://www.kaggle.com/mehdidag/black-friday
 ## Information in Dataset
 - Customer Information:
 	- User ID
