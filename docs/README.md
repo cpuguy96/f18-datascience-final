@@ -69,7 +69,7 @@ We can see that most features are weakly correlated. The customer age correlates
 Following one-hot encoding of categorical data, dimensionality reduction is necessary to improve the performance of prospective learning algorithms. Thus, principle component analysis and factor analysis are used to reduce the dimensionality of the dataset and allow for visualization after preprocessing. The top 95% of variance explained by each dimensionality method is used as a baseline for feature reduction. Separate datasets are created from each feature reduction method. 
 ![Principle Component Analysis](http://shahidhn.github.io/f18-datascience-final/images/pca.jpg)
 ### K-means Clustering
-K-means clustering is used to segment customers based on their demographics. The elbow method is used to determine the optimal number of clusters to create for the normal model, principle component analysis, and factor analysis datasets. After a specified number of clusters is given, k-means clustering is run to create additional datasets containing also the user assigned cluster number. 
+K-means clustering is used to segment customers based on their demographics. The elbow method is used to determine the optimal number of clusters to create for the normal model, principle component analysis, and factor analysis datasets. After a specified number of clusters is given, k-means clustering is run to create additional datasets containing the user assigned cluster number. 
 ![K-means clustering](http://shahidhn.github.io/f18-datascience-final/images/k-means_clustering.jpg)
 
 ## Predictive Modeling
