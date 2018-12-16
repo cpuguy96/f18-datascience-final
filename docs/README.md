@@ -63,6 +63,12 @@ By visualizing the range of purchase values, we can later better evaluate our mo
 We can see that most features are weakly correlated. The customer age correlates with their marital status - this makes sense, as married people tend to be older than unmarried people. 'Product Category 1' (which every entry will have filled in) correlates with the purchase amounts, which suggests that certain product categories cost more. Also, 'Product Category 1' correlates with 'Product Category 3', which suggests that there are certain categories which often show up together.
 
 # Modeling
+##Data Exploration
+Following one-hot encoding of categorical data, dimensionality reduction was necessary to improve the performance of prospective learning algorithms. Thus, principle component analysis and factor analysis are used to reduce the dimensionality of the dataset and allow for visualization after preprocessing. The top 95% of variance explained by each dimensionality method is used as a baseline for feature reduction. Separate datasets are created from each feature reduction method. 
+![Principle Component Analysis](http://shahidhn.github.io/f18-datascience-final/images/pca.jpg)
+
+##Model Selection
+
 
 # Results
 These are the MAEs obtained from the various models we used to predict purchase amount per category, following PCA and clustering:
